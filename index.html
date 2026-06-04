@@ -801,6 +801,7 @@ function handleFiles(files) {
   if (!files.length) return;
   state.total += files.length;
   progressWrap.style.display = 'block';
+  progressLabel.textContent = 'Analyzing…';
   files.forEach(processFile);
 }
 
@@ -1000,7 +1001,7 @@ btnCSV.addEventListener('click', () => {
   ).join('\n');
   const blob = new Blob([header + rows], { type: 'text/csv' });
   const ts   = new Date().toISOString().slice(0,19).replace(/[:T]/g,'-');
-  saveBlob(blob, `foliage_${ts}.csv`);
+  saveBlob(blob, `canopeo_dragdrop_${ts}.csv`);
 });
 
 /* ── ZIP download ──────────────────────────────────────────────── */
@@ -1032,7 +1033,7 @@ btnZIP.addEventListener('click', async () => {
 
     const content = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' });
     const ts      = new Date().toISOString().slice(0,19).replace(/[:T]/g,'-');
-    saveAs(content, `foliage_${ts}.zip`);
+    saveAs(content, `canopeo_dragdrop_${ts}.zip`);
   } finally {
     btnZIP.disabled = false;
     btnZIP.innerHTML = `<svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M10 11H3a1 1 0 01-1-1V3a1 1 0 011-1h4.5L11 5.5V10a1 1 0 01-1 1z" stroke="currentColor" stroke-width="1.2"/><path d="M7 2v3.5H11" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 6v3m-1-1.5h2" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg> ZIP`;

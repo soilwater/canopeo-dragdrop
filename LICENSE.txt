@@ -1,6 +1,6 @@
 Canopeo Desktop
 Copyright (c) 2026 Andres Patrignani and Tyson E. Ochsner
-Required Notice: Copyright 2026 Patrignani & Ochsner (https://soilwater.github.io/canopeo-desktop/)
+Required Notice: Copyright 2026 Patrignani & Ochsner (https://soilwater.github.io/canopeo-dragdrop/)
 
 Licensed under the PolyForm Noncommercial License 1.0.0.
 You may obtain a copy of the license at:

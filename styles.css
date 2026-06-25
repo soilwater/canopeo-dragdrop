@@ -139,12 +139,12 @@ html, body {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-muted);
-  font-size: 12.5px;
+  font-size: 15px;
   margin-right: 6px;
 }
-.menubar-logo { width: 18px; height: 18px; }
+.menubar-logo { width: 25px; height: 25px; }
 
 .menubar-right {
   display: flex;
@@ -483,8 +483,11 @@ input[type="range"] { width: 100%; accent-color: var(--slider-accent); cursor: p
 }
 .color-chip:hover { transform: scale(1.15); }
 .color-chip.active {
-  box-shadow: 0 0 0 2px rgb(243, 1, 162);
   transform: scale(1.1);
+  box-shadow: 
+    0 0 0 2px #ffffff,  /* Inner white ring */
+    0 0 0 4px #000000,  /* Outer black ring */
+    0 4px 10px rgba(0, 0, 0, 0.3); /* Soft drop shadow for depth */
 }
 
 /* "Original" chip: subtle neutral diagonal hatch to read as "as-is", not a control color */

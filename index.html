@@ -104,7 +104,6 @@
             <span class="step-dot"></span>
             <h2 class="step-title">Adjust &amp; inspect</h2>
           </header>
-          <p class="step-sub">A value between 0.95 and 0.98 works well for most crops and field conditions. Tune below if the overlay doesn't match the canopy.</p>
 
           <div class="readout">
             <div class="readout-cover">
@@ -124,6 +123,14 @@
             <div class="scale-ends"><span>stricter</span><span>more permissive</span></div>
           </div>
 
+          <p class="step-sub">A ratio value between 0.95 and 0.98 works well for most crops and field conditions.</p>
+          <label class="check">
+            <input type="checkbox" id="noise-reduction-checkbox" checked />
+            <span>Remove small specks (noise reduction)</span>
+          </label>
+
+          <hr/>
+
           <div class="field">
             <span class="field-label">Overlay color</span>
             <div class="color-chips" id="mask-color-chips">
@@ -133,6 +140,7 @@
               <button class="color-chip" data-color="#00ffff" style="background:#00ffff" title="Cyan"></button>
               <button class="color-chip" data-color="#b84dff" style="background:#b84dff" title="Purple"></button>
               <button class="color-chip" data-color="#ff7a00" style="background:#ff7a00" title="Orange"></button>
+              <button class="color-chip" data-color="#ff0095" style="background:#ff0095" title="Pink"></button>
               <button class="color-chip is-original" data-color="original" title="Original pixel colors"></button>
             </div>
           </div>
@@ -143,10 +151,7 @@
             <div class="scale-ends"><span>photo</span><span>overlay</span></div>
           </div>
 
-          <label class="check">
-            <input type="checkbox" id="noise-reduction-checkbox" checked />
-            <span>Remove small specks (noise reduction)</span>
-          </label>
+          <hr/>
 
           <div class="info-block">
             <p class="info-line" id="image-name-label">Filename:</p>
@@ -240,7 +245,7 @@
   <div class="modal-overlay" id="about-modal">
     <div class="modal-box">
       <h2>About <button class="close-btn" data-close-modal>✕</button></h2>
-      <p class="version-line">Canopeo version: <span id="about-version">1.0</span> (web)</p>
+      <p class="version-line">Canopeo Drag&Drop version: <span id="about-version">1.0</span> (web)</p>
       <p>Canopeo is a tool for quantifying the fraction of green canopy cover from downward-facing images. Canopeo helps users track vegetation growth, assess management practices, and support agronomic and ecological research.</p>
       <h4>Reference</h4>
       <p>Patrignani, A., &amp; Ochsner, T. E. (2015). Canopeo: A powerful new tool for measuring fractional green canopy cover. Agronomy Journal, 107(6), 2312–2320. <a href="https://doi.org/10.2134/agronj15.0150" target="_blank" rel="noopener">https://doi.org/10.2134/agronj15.0150</a></p>
@@ -256,7 +261,7 @@
         <img src="assets/osu_logo.png" alt="Oklahoma State University" onerror="this.style.display='none'" />
       </div>
       <h4>Privacy</h4>
-      <p>This is a client-side web app: your images are processed entirely on your own device using your browser's Canvas APIs. Nothing is uploaded anywhere.</p>
+      <p>This is a client-side web app: your images are processed entirely on your own device. Nothing is uploaded anywhere.</p>
     </div>
   </div>
 
@@ -318,7 +323,7 @@
       <pre id="license-text">
 Canopeo
 Copyright (c) 2026 Patrignani &amp; Ochsner
-Required Notice: Copyright 2026 Patrignani &amp; Ochsner (https://soilwater.github.io/canopeo-desktop/)
+Required Notice: Copyright 2026 Patrignani &amp; Ochsner (https://soilwater.github.io/canopeo-dragdrop/)
 Licensed under the PolyForm Noncommercial License 1.0.0.
 The full text of the license follows below.
 
